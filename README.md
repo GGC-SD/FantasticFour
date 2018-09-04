@@ -16,6 +16,6 @@
 
 :camel: **Dionne:** *(Main role)* Data modeler, UI Design, code architecture
 
-:phone: **Nishanth:** *(MAIN role)* Documentation lead, client lead, UI Design
+:phone::architecture: **Nishanth M:** *(MAIN role)* Documentation lead, client lead, UI Design
 
 :cactus: :cake: :camel:
