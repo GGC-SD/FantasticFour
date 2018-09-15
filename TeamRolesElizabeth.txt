@@ -9,6 +9,6 @@ Other progress tracking tools: Mobile discussion, GroupMe
 
 Group members & roles:
 1. Elizabeth Haynie: (MAIN role) UI/UX Design, testing lead, lead programmer
-2. Brad: (Main role) Team manager, client liaison, code architecture
-3. Dionne: (Main role) Data modeler, UI Design, code architecture
+2. Brad: (Main role) Team manager, Client liaison, Data modeler 
+3. Dionne: (Main role) UI Design, code architecture
 4. Nishanth: (MAIN role) Documentation lead, client lead, UI Design
