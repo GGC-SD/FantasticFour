@@ -1,3 +1,0 @@
-git add .
-git ignore nodejs
-git commit -m
