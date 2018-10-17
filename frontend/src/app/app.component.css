@@ -1,0 +1,28 @@
+.body {
+	background-color: #f9ff87;
+}
+
+.div {
+    margin-left: 200px;
+    margin-right: 200px;
+	}
+
+.logo {
+    height: 252px;
+    width: 528px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    background:url('C:\Users\Brad\FantasticFour\frontend\src\app\Images\workonlogo.png') no-repeat center center;
+}
+.left {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFC125;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
