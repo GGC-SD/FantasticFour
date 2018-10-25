@@ -13,7 +13,7 @@
     padding: 10px;
     display: block;
     margin: 0 auto;
-    background:url('C:\Users\Brad\FantasticFour\frontend\src\app\Images\workonlogo.png') no-repeat center center;
+    background:url('C:\Users\ehayn\OneDrive\Desktop\FantasticFour-develop\frontend\src\app\Images\workonlogo1.png') no-repeat center center;
 }
 .left {
     height: 100%;
@@ -25,4 +25,10 @@
     background-color: #FFC125;
     overflow-x: hidden;
     padding-top: 20px;
+}
+.center {
+    margin: auto;
+    width: 45%;
+    border: 1px solid black;
+    padding: 10px;
 }

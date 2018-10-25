@@ -21,7 +21,13 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #FFC125;
+    background-color: #ffec63;
     overflow-x: hidden;
     padding-top: 20px;
+}
+.center {
+    margin: auto;
+    width: 45%;
+    border: 1px solid black;
+    padding: 10px;
 }
