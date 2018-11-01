@@ -1,5 +1,4 @@
 <div style="text-align:center">
-
   <div ng-view></div>
     <script src='test.js' type="text/javascript"></script>
 <link href="app.component.css">
@@ -18,23 +17,27 @@ in the nation. You may also apply through the central server through the click o
 <div class="body"></div>
 <!--sidebar starting-->
 <div class="left">
-    <a routerLink="/about"><input type="submit" value="About Us" /></a><br>
+    <a routerLink="/about"><input type="submit" value="About Us" /></a><br><br>
     <a routerLink="/help"><input type="submit" value="Help" /></a>
 </div>
 <!--sidebar ending-->
 <h2>Welcome! Enter credentials below to get started. </h2>
   GPA: <br>
 <form>
-    <input type="text" name="GPA"><br>
+    <input name="GPA" type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+    <br>
 </form><br>
-Have you taken the GRE? If yes, check the box. <input type="checkbox"><br><br>
-If so, enter the GRE score: <br>
+Have you taken the GRE? If yes, check the box. <input type="checkbox" data-md-icheck (change)="toggleVisibility($event)"/><br>
+<span *ngIf="marked">
+Enter the GRE score: <br>
 <form>
-    <input type="text" name="GRE"><br>
-</form><br>
+    <input name="GRE" type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /><br>
+</form></span>
+
+<br>
 Patient Healthcare Hours: <br>
 <form>
-    <input type="text" name="PHH"><br>
+    <input type="text" name="PHH" maxlength="5" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" ><br>
 </form><br>
 
     <a routerLink="/name"><input type="submit" value="Graph" /></a>

@@ -2,6 +2,7 @@ public double gpa;
 public double userInputGpa;
 public String outputGpa;
 public double difference;
+public double healthcareHours;
 
 public String percentageReturnGpa()
 {
@@ -52,4 +53,26 @@ public void returnGraph()
 	{
 		<img src="graph7.png">
 	}
+}
+
+public String returnGre()
+{
+	
+}
+
+public String returnHealthcareHours()
+{
+	if (healthcareHours <= 199)
+	{
+		return "Seek more hours. Here are some resources: ";
+	}
+	else if (healthcareHours >= 200 && healthcareHours <= 400)
+	{
+		return "Your hours are looking okay. Check your schools requirements to see if you meet their criteria.";
+	}
+	else if (healthcareHours >= 401 && healthcareHours <= 1999)
+	{
+		return "You have a lot of hours, good job. Check with your schools requirements to see if you qualify.";
+	}
+	else return "You have plenty of hours! Don't forget to check with your schools requirements just to make sure!";
 }

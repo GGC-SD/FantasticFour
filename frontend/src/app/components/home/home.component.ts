@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleVisibility(e){
+    this.marked= e.target.checked;
+  }
+
 }
