@@ -11,7 +11,7 @@ const router = express.Router();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://127.0.0.1/school');
+mongoose.connect('mongodb://bmashlum:2019Kuronos@ds121163.mlab.com:21163/paprogram');
 
 const connection = mongoose.connection;
 
