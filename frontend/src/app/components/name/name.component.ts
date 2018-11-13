@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SchoolService } from 'C:/Users/Brad/FantasticFour/frontend/src/app/school.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-name',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NameComponent implements OnInit {
 
-  constructor() { }
+  constructor(private schoolService: SchoolService, private router: Router) { }
 
   ngOnInit() {
   }

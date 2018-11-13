@@ -3,6 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var School = require('../models/School.js');
 var dbUrl = 'mongodb://bmashlum:2019Kuronos@ds121163.mlab.com:21163/paprogram'
+
 /* GET ALL SchoolS */
 router.get('/', function(req, res, next) {
   console.log("find school");

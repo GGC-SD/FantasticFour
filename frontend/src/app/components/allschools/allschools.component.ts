@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SchoolService } from '../../school.service';
+import {Router} from '@angular/router';
+import {School} from '../../school.model';
 
 @Component({
   selector: 'app-allschools',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllschoolsComponent implements OnInit {
 
-  constructor() { }
+  school: School[];
 
-  ngOnInit() {
+
+  constructor(private schoolService: SchoolService, private router: Router) { }
+
+  ngOnInit() {this.fetchSchool();
+  }
+
+  fetchSchool() {
+    this.schoolService
+    .getSchool()
+    .subscribe((data: School[]) => {
+      this.school = data;
+      console.log('Data requested ... ');
+      console.log(this.school);
+    });
   }
 
 }

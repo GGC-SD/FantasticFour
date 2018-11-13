@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +11,8 @@ import { NameComponent } from './components/name/name.component';
 import { HomeComponent } from './components/home/home.component';
 import { MyschoolsComponent } from './components/myschools/myschools.component';
 import { AllschoolsComponent } from './components/allschools/allschools.component';
+
+import { SchoolService } from './school.service';
 
 
 const routes: Routes = [
@@ -36,9 +38,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SchoolService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
