@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { SchoolService } from 'C:/Users/Brad/FantasticFour/frontend/src/app/school.service';
-import {Router} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {SchoolService} from 'C:/Users/Brad/FantasticFour/frontend/src/app/school.service';
+import {ActivatedRoute, Router} from '@angular/router';
 import {School} from '../../school.model';
 
 @Component({
@@ -10,20 +10,15 @@ import {School} from '../../school.model';
 })
 export class MyschoolsComponent implements OnInit {
 
-  school: School[];
+  id: String;
+  school: any = {};
 
-  constructor(private schoolService: SchoolService, private router: Router) { }
-
-  ngOnInit() {
-    this.getSchool();
+  constructor(private schoolService: SchoolService, private router: Router, private route: ActivatedRoute) {
   }
 
-  getSchool() {
-    return this.schoolService.getSchool()
-      .subscribe(
-        school => {
-          console.log(school);
-           this.school=  school;
-        }
-      );
-}}
+  ngOnInit() {
+
+  }
+
+
+}

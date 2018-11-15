@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SchoolService } from '../../school.service';
-import {Router} from '@angular/router';
-import {School} from '../../school.model';
+import { Router } from '@angular/router';
+import { School } from '../../school.model';
 
 @Component({
   selector: 'app-allschools',
@@ -22,7 +22,8 @@ export class AllschoolsComponent implements OnInit {
     this.schoolService
     .getSchool()
     .subscribe((data: School[]) => {
-      this.school = data;
+      // @ts-ignore
+      this.school = (JSON.stringify(data));
       console.log('Data requested ... ');
       console.log(this.school);
     });
