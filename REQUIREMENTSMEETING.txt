@@ -1,0 +1,26 @@
+TYPICAL SCHOOLS GPA, GRE, community service hours, etc
+
+Mercer - Bachelor Degree(regionally accredited), 300 GRE, >=3.0 GPA, min Analytical Score 3.5, 1000 Patient Care Hours
+
+Emory - Bachelor Degree(regionally accredited), 301 GRE (preferred, taken in last 5 years), >=3.0 GPA, Analytical Score 4.0 (preferred), 2000 Patient Care Hours
+
+Augusta University- Bachelor Degree(regionally accredited), >=290 GRE, >=3.0 GPA, >= 100 Patient Care Hours
+
+South University - Bachelor Degree(regionally accredited), GRE(50th percentile or above preferred), >=3.0 GPA, 0 Patient Hours Required(Hours preferred)
+
+
+REQUIREMENTS MEETING: LIST PRIORITY
+Do you want an app or website?
+Who is the audience? (Students)... They are not only possibly getting matched to Gwinnett Medical center but other hospitals as well??
+All hospitals in America or only those in Georgia??
+What qualifies as most likely to be accepted in? What is most important? List in priority or all equally important.
+What, in your eyes, would make for a very effecient website?
+Must they apply to the program prior to having the option to contact the hospital?
+How should they contact the hospitals they're matched with, email or phone? Or will they submit their information and someone contact them?
+Would it be ideal to have a name of the person they must be in contact with displayed?
+
+We are thinking: a website/app with blank input boxes present on the page, they must enter their values and press 'Go'. The new page that appears will have a list
+of hospitals. When they hover over the hospital name, 
+a brief small window will appear that lists: the name, small photo, requirements
+When the hospital is clicked, there will be 
+a new page with: name, address, contact number, contact email, small photo, requirements, button to directly apply.

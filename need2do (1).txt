@@ -1,0 +1,13 @@
+Start looking at functions to find average GPA nationally
+Start looking at functions to find average GRE nationally
+Start looking at functions to find average Patient Care Hours nationally
+Get affiliates resources from client
+Create three static bell graphs for page - LIZZ
+find function to figure out where data point will be located on bell graph
+link back end to front end
+route pages together in angular 6 - LIZZ
+get CSS working - DIONNE
+finish adding 40 objects into database - BRAD
+finding the javascript function to stop user going to next page without data being entered - NISH
+add sidebar - LIZZ WILL TRY
+create a help page and about us page - LIZZ
