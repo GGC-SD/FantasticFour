@@ -6,12 +6,12 @@ import mongoose from 'mongoose';
 import School from 'C:/Users/Brad/FantasticFour/backend/models/School';
 
 const app = express();
-const router = express.Router();		
+const router = express.Router();
 
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://bmashlum:fantastic4@ds121163.mlab.com:21163/paprogram');
+mongoose.connect('mongodb://brad:bradfantastic4@ds121163.mlab.com:21163/paprogram', {useNewUrlParser: true});
 
 const connection = mongoose.connection;
 
@@ -29,7 +29,7 @@ router.route('/school').get((req, res) => {
 });
 
 router.route('/school/:id').get((req, res) => {
-	School.findById(req.params.id, (err, school) => {
+    School.findById(req.params.id, (err, school) => {
         if (err)
             console.log(err);
         else
@@ -60,7 +60,6 @@ router.route('/school/update/:id').post((req, res) => {
             school.greReq = req.body.greReq;
             school.hoursReq = req.body.hoursReq;
             school.lettersReq = req.body.lettersReq;
-
 
 
             school.save().then(school => {

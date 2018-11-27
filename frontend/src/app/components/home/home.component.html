@@ -1,45 +1,53 @@
 <div style="text-align:center">
   <div ng-view></div>
-    <script src='test.js' type="text/javascript"></script>
-<link href="app.component.css">
+  <script src='test.js' type="text/javascript"></script>
+  <link href="app.component.css">
 
-   <h1>
-    Welcome To WhatAreMyChances.com 
+  <h1>
+    Welcome To WhatAreMyChances.com
   </h1>
-  <br><div class="center">
-A website developed to assist physician assistant students that are 
-seeking to enter graduate school. Simply enter your <b>name, GPA, GRE
-& patient healthcare hours</b> to view how you rank among other students 
-nationally, give you resources on how to improve & view all graduate schools 
-in the nation. You may also apply through the central server through the click of a button!</div>
+  <br>
+  <div class="center">
+    A website developed to assist physician assistant students that are
+    seeking to enter graduate school. Simply enter your <b>name, GPA, GRE
+    & patient healthcare hours</b> to view how you rank among other students
+    nationally, give you resources on how to improve & view all graduate schools
+    in the nation. You may also apply through the central server through the click of a button!
+  </div>
   <br>
   <title>WhatAreMyChances</title>
-<div class="body"></div>
-<!--sidebar starting-->
-<div class="left">
-    <a routerLink="/about"><input type="submit" value="About Us" /></a><br><br>
-    <a routerLink="/help"><input type="submit" value="Help" /></a>
-</div>
-<!--sidebar ending-->
-<h2>Welcome! Enter credentials below to get started. </h2>
+  <div class="body"></div>
+  <!--sidebar starting-->
+  <div class="left">
+    <a routerLink="/about"><input type="submit" value="About Us"/></a><br><br>
+    <a routerLink="/help"><input type="submit" value="Help"/></a>
+  </div>
+  <!--sidebar ending-->
+  <h2>Welcome! Enter credentials below to get started. </h2>
   GPA: <br>
-<form>
-    <input name="GPA" type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+  <form>
+    <input name="GPA" type="text" maxlength="4"
+           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
     <br>
-</form><br>
-Have you taken the GRE? If yes, check the box. <input type="checkbox" data-md-icheck (change)="toggleVisibility($event)"/><br>
-<span *ngIf="marked">
+  </form>
+  <br>
+  Have you taken the GRE? If yes, check the box. <input type="checkbox" data-md-icheck
+                                                        (change)="toggleVisibility($event)"/><br>
+  <span *ngIf="marked">
 Enter the GRE score: <br>
 <form>
-    <input name="GRE" type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /><br>
+    <input name="GRE" type="text" maxlength="4"
+           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/><br>
 </form></span>
 
-<br>
-Patient Healthcare Hours: <br>
-<form>
-    <input type="text" name="PHH" maxlength="5" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" ><br>
-</form><br>
+  <br>
+  Patient Healthcare Hours: <br>
+  <form>
+    <input type="text" name="PHH" maxlength="5"
+           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+  </form>
+  <br>
 
-    <a routerLink="/name"><input type="submit" value="Graph" /></a>
+  <a routerLink="/name"><input type="submit" value="Graph"/></a>
 
 </div>

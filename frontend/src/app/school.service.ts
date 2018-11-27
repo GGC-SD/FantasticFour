@@ -12,7 +12,8 @@ export class SchoolService {
   }
 
   getSchool() {
-    return this.http.get(`${this.uri}/school`);
+    // @ts-ignore
+    return this.http.get(`${this.uri}/school` );
   }
 
   getSchoolById(id) {
