@@ -1,0 +1,40 @@
+.body {
+	background-color: #f9ff87;
+}
+
+.mySchoolsDiv {
+  margin-left: 200px;
+  margin-right: 200px;
+  padding-left: 100px;
+
+}
+
+.div {
+    margin-left: 200px;
+    margin-right: 200px;
+	}
+
+.logo {
+    height: 252px;
+    width: 528px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.left {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffec63;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.center {
+    margin: auto;
+    width: 45%;
+    border: 1px solid black;
+    padding: 10px;
+}

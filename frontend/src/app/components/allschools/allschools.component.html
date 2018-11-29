@@ -1,0 +1,30 @@
+<div style="text-align:center">
+
+  <div ng-view></div>
+  <script src='test.js' type="text/javascript"></script>
+  <link href="app.component.css">
+
+  <h1>
+    All Schools Nationally:
+  </h1>
+
+  <div class="allSchoolsDiv">
+    <p>{{school}}</p>
+  </div>
+
+  Apply through the Central Application Service: <br><br>
+  <a href="https://caspa.liaisoncas.com/applicant-ux/#/login"><input type="submit" value="Apply"/></a>
+
+  <title>WhatAreMyChances</title>
+  <div class="body"></div>
+  <!--sidebar starting-->
+  <div class="left">
+
+    <a routerLink="/home"><input type="submit" value="Home"/></a><br><br>
+
+    <a routerLink="/about"><input type="submit" value="About Us"/></a><br><br>
+
+    <a routerLink="/help"><input type="submit" value="Help"/></a>
+  </div>
+  <!--sidebar ending-->
+</div>

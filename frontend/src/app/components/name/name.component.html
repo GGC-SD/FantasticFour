@@ -1,0 +1,38 @@
+<div style="text-align:center">
+
+  <div ng-view></div>
+    <script src='test.js' type="text/javascript"></script>
+<link href="app.component.css">
+
+   <h1>
+    Enter Name And Email To Get Results:
+  </h1>
+  <br>
+  First Name:<br>
+  <form>
+    <input type="text" name="fname" maxlength="20" oninput="this.value = this.value.replace(/[^a-z]/gi,'')"><br>
+</form><br>
+Last Name:<br>
+  <form>
+    <input type="text" name="lname" maxlength="20" oninput="this.value = this.value.replace(/[^a-z]/gi,'')"><br>
+</form><br>
+  Email:<br>
+  <form>
+    <input type="text" name="email"><br><br>
+</form>
+
+<a routerLink="/myschools"><input type="submit" value="View Results" /></a>
+
+<title>WhatAreMyChances</title>
+<div class="body"></div>
+<!--sidebar starting-->
+<div class="left">
+
+    <a routerLink="/home"><input type="submit" value="Home" /></a><br><br>
+
+    <a routerLink="/about"><input type="submit" value="About Us" /></a><br><br>
+
+    <a routerLink="/help"><input type="submit" value="Help" /></a>
+</div>
+<!--sidebar ending-->
+</div>

@@ -1,0 +1,84 @@
+<div style="text-align:center">
+  <div ng-view></div>
+  <script src='test.js' type="text/javascript"></script>
+  <link href="app.component.css">
+
+  <h1>
+    Welcome To WhatAreMyChances.com
+  </h1>
+  <br>
+  <div class="center">
+    A website developed to assist physician assistant students that are
+    seeking to enter graduate school. Simply enter your <b>name, GPA, GRE
+    & patient healthcare hours</b> to view how you rank among other students
+    nationally, give you resources on how to improve & view all graduate schools
+    in the nation. You may also apply through the central server through the click of a button!
+  </div>
+  <br>
+  <title>WhatAreMyChances</title>
+  <div class="body"></div>
+
+  <!--sidebar starting-->
+  <div class="left">
+    <a routerLink="/about"><input type="submit" value="About Us"/></a><br><br>
+    <a routerLink="/help"><input type="submit" value="Help"/></a>
+  </div>
+  <!--sidebar ending-->
+
+  <h2>Welcome! Enter credentials below to get started. </h2>
+
+  <form [formGroup]="exampleForm" (ngSubmit)="onSubmit()">
+    GPA: <br>
+    <div class="form-group">
+      <input class="form-control" formControlName="userGpaValue" type="text" maxlength="4"
+             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+    </div>
+    <br>
+
+    <br>
+    Have you taken the GRE? If yes, check the box. <input type="checkbox" data-md-icheck
+                                                          (change)="toggleVisibility($event)"/><br>
+    <span *ngIf="marked">
+      <br>
+Enter the GRE score: <br>
+<div class="form-group">
+    <input class="form-control" formControlName="userGreValue" type="text" maxlength="4"
+           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/><br>
+    </div>
+      </span>
+    <br>
+    Patient Healthcare Hours: <br>
+    <div class="form-group">
+      <input class="form-control" formControlName="userPhValue" type="text" name="PHH" maxlength="5"
+             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+      <br>
+    </div>
+
+    <br>
+    Amount of Letters Of Recommendation: <br>
+    <div class="form-group">
+      <input class="form-control" formControlName="userLeValue" type="text" name="PHH" maxlength="5"
+             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+      <br>
+    </div>
+
+    <h3>
+      Press Graph and then press Continue to view results!
+    </h3>
+
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Graph</button>
+    </div>
+    <br>
+    <br>
+
+    <a routerLink="/name">
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Continue</button>
+      </div>
+    </a>
+
+  </form>
+
+
+</div>
