@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './components/about-us/about-us.component';
@@ -14,6 +16,7 @@ import { AllschoolsComponent } from './components/allschools/allschools.componen
 
 import { SchoolService } from './school.service';
 
+import { AlertsModule } from 'angular-alert-module';
 
 const routes: Routes = [
   { path: 'about', component: AboutUsComponent},
@@ -36,10 +39,13 @@ const routes: Routes = [
     AllschoolsComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    AlertsModule.forRoot()
   ],
   providers: [SchoolService],
   bootstrap: [AppComponent]

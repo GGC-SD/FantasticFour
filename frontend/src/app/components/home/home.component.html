@@ -17,37 +17,68 @@
   <br>
   <title>WhatAreMyChances</title>
   <div class="body"></div>
+
   <!--sidebar starting-->
   <div class="left">
     <a routerLink="/about"><input type="submit" value="About Us"/></a><br><br>
     <a routerLink="/help"><input type="submit" value="Help"/></a>
   </div>
   <!--sidebar ending-->
+
   <h2>Welcome! Enter credentials below to get started. </h2>
-  GPA: <br>
-  <form>
-    <input name="GPA" type="text" maxlength="4"
-           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+
+  <form [formGroup]="exampleForm" (ngSubmit)="onSubmit()">
+    GPA: <br>
+    <div class="form-group">
+      <input class="form-control" formControlName="userGpaValue" type="text" maxlength="4"
+             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+    </div>
     <br>
-  </form>
-  <br>
-  Have you taken the GRE? If yes, check the box. <input type="checkbox" data-md-icheck
-                                                        (change)="toggleVisibility($event)"/><br>
-  <span *ngIf="marked">
+
+    <br>
+    Have you taken the GRE? If yes, check the box. <input type="checkbox" data-md-icheck
+                                                          (change)="toggleVisibility($event)"/><br>
+    <span *ngIf="marked">
+      <br>
 Enter the GRE score: <br>
-<form>
-    <input name="GRE" type="text" maxlength="4"
+<div class="form-group">
+    <input class="form-control" formControlName="userGreValue" type="text" maxlength="4"
            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/><br>
-</form></span>
+    </div>
+      </span>
+    <br>
+    Patient Healthcare Hours: <br>
+    <div class="form-group">
+      <input class="form-control" formControlName="userPhValue" type="text" name="PHH" maxlength="5"
+             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+      <br>
+    </div>
 
-  <br>
-  Patient Healthcare Hours: <br>
-  <form>
-    <input type="text" name="PHH" maxlength="5"
-           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+    <br>
+    Amount of Letters Of Recommendation: <br>
+    <div class="form-group">
+      <input class="form-control" formControlName="userLeValue" type="text" name="PHH" maxlength="5"
+             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+      <br>
+    </div>
+
+    <h3>
+      Press Graph and then press Continue to view results!
+    </h3>
+
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Graph</button>
+    </div>
+    <br>
+    <br>
+
+    <a routerLink="/name">
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Continue</button>
+      </div>
+    </a>
+
   </form>
-  <br>
 
-  <a routerLink="/name"><input type="submit" value="Graph"/></a>
 
 </div>

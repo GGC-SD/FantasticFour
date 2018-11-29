@@ -8,6 +8,7 @@
 	}
 
 .logo {
+    background: url("workonlogo.png")no-repeat;
     height: 252px;
     width: 528px;
     padding: 10px;

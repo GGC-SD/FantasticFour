@@ -18,17 +18,18 @@ export class AllschoolsComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(localStorage.getItem('userGpaValue'));
     this.fetchSchool();
   }
 
   fetchSchool() {
     this.schoolService
-      .getSchool()
+      .getSchools()
       .subscribe((data: School[]) => {
         let schoolNames = '';
         let counter = 0;
         data.forEach((sc) => {
-          schoolNames = schoolNames + (counter > 0 ? '<br/>' : '') + sc.name;
+          schoolNames = schoolNames + (counter > 0 ? ', ' : '') + sc.name;
           counter = counter + 1;
         });
 

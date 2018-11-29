@@ -10,7 +10,7 @@ let School = new Schema({
         type: String
     },
     gpaReq: {
-        type: Number
+        type: Number,
     },
     gre: {
         type: Boolean

@@ -10,15 +10,29 @@ import {School} from '../../school.model';
 })
 export class MyschoolsComponent implements OnInit {
 
-  id: String;
-  school: any = {};
+  schools: School[];
 
   constructor(private schoolService: SchoolService, private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-
+    console.log(localStorage.getItem('userGpaValue'));
+    this.fetchSchool();
   }
 
+  fetchSchool() {
+    this.schoolService
+      .getSchool()
+      .subscribe((data: School[]) => {
+        let schoolNames = '';
+        let counter = 0;
+        data.forEach((sc) => {
+          schoolNames = schoolNames + (counter > 0 ? ', ' : '') + sc.name;
+          counter = counter + 1;
+        });
 
+        // @ts-ignore
+        this.school = schoolNames;
+      });
+  }
 }

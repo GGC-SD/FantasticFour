@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
-
 import School from 'C:/Users/Brad/FantasticFour/backend/models/School';
 
 const app = express();
@@ -11,7 +10,7 @@ const router = express.Router();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://brad:bradfantastic4@ds121163.mlab.com:21163/paprogram', {useNewUrlParser: true});
+mongoose.connect('mongodb://brad:bradfantastic4@ds121163.mlab.com:21163/paprogram',{ useNewUrlParser: true });
 
 const connection = mongoose.connection;
 
@@ -19,7 +18,7 @@ connection.once('open', () => {
     console.log('MongoDB database connection established successfully!');
 });
 
-router.route('/school').get((req, res) => {
+router.route('/schools').get((req, res) => {
     School.find((err, school) => {
         if (err)
             console.log(err);
@@ -28,8 +27,27 @@ router.route('/school').get((req, res) => {
     });
 });
 
+router.route('/school').get((req, res) => {
+    let p = req.query.userGpaValue;
+    let e = req.query.userGreValue;
+    let h = req.query.userPhValue;
+    let l = req.query.userLeValue;
+
+    School.find({
+        gpaReq: {$lte: (p ? p: 0)},
+        greReq: {$lte: (e ? e: 0)},
+        hoursReq: {$lte: (h ? h: 0)},
+        lettersReq: {$lte: (l ? l: 0)}
+    }, (err, school) => {
+        if (err)
+            console.log(err);
+        else
+            res.json(school);
+    });
+});
+
 router.route('/school/:id').get((req, res) => {
-    School.findById(req.params.id, (err, school) => {
+	School.findById(req.params.id, (err, school) => {
         if (err)
             console.log(err);
         else
@@ -60,6 +78,7 @@ router.route('/school/update/:id').post((req, res) => {
             school.greReq = req.body.greReq;
             school.hoursReq = req.body.hoursReq;
             school.lettersReq = req.body.lettersReq;
+
 
 
             school.save().then(school => {
